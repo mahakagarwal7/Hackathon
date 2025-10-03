@@ -1,0 +1,60 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AfterShip Pro Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body style="background-image: url('mahak4.jpg'); background-repeat: no-repeat; background-size: cover; background-position: center;"></body>>
+
+<div id="onboard-screen" class="screen">
+    <div class="container text-center">
+        <h1 class="main-title">🚀 Welcome to AfterShip Pro Tracker!</h1>
+        <p class="subtitle">This application lets you track all your packages in one place. Your data is saved locally in your browser.</p>
+        <button id="start-tracking-button" class="btn btn-primary">Start Tracking</button>
+    </div>
+</div>
+
+<div id="main-app" class="screen hidden">
+    <div class="container">
+        <div class="header">
+            <h1 id="main-title" class="main-title"></h1>
+            <div class="language-selector">
+                <label for="language-select" class="label">Language:</label>
+                <select id="language-select" class="select-field">
+                    <option value="en">English</option>
+                    <option value="es">Español</option>
+                </select>
+            </div>
+        </div>
+        
+        <p id="main-subtitle" class="subtitle"></p>
+
+        <div class="input-section">
+            <div class="form-group">
+                <label id="tracking-number-label" for="tracking-number" class="label"></label>
+                <input type="text" id="tracking-number" placeholder="e.g. 1Z9999999999999999" class="input-field">
+            </div>
+            <button id="track-button" class="btn btn-primary">
+                <span id="button-text"></span>
+                <div id="loading-indicator" class="spinner hidden"></div>
+            </button>
+        </div>
+
+        <div id="message-area" class="message-area"></div>
+
+        <div id="saved-packages-section" class="saved-packages-section">
+            <h2 id="your-packages-title" class="section-title"></h2>
+            <div id="saved-package-list" class="package-list">
+                <p id="no-packages-message" class="no-packages"></p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
